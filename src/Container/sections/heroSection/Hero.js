@@ -9,7 +9,7 @@ const Hero = () => {
   const [isSubLinksOpen, setIsSubLinksOpen] = useState(false);
   
   const handleMouseOver = (e) => {
-    if (e.target.className.includes("about")) {
+    if (e.target.className.includes("about-link")) {
       setIsSubLinksOpen(true);
     }else {
       setIsSubLinksOpen(false);
@@ -38,7 +38,7 @@ const Hero = () => {
             <a href="#hero">home</a>
           </div>
           <div className="link relative">
-            <a href="" className="about flex items-center">
+            <a href="" className="about-link flex items-center">
               about
               <IoIosArrowDown className="ml-1" style={{zIndex:'-5'}}/>
             </a>

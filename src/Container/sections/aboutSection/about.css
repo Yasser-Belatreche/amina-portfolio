@@ -1,0 +1,57 @@
+.about {
+    @apply mx-32 my-20
+}
+
+.about .container {
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr 2fr;
+    @apply grid gap-10 items-end
+}
+
+.about .img {
+    height: 550px;
+    width: 70%;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    @apply justify-self-end relative ml-8
+}
+
+.about .img:after {
+    content: '';
+    z-index: -1;
+    top: -25px;
+    left: -25px;
+    background-color: #8447FF;
+    @apply absolute h-full w-full
+}
+
+.about .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about .title {
+    align-items: flex-end !important;
+    @apply flex h-full w-full
+}
+
+.about .desc p {
+    font-size: 28px;
+    line-height: 50px;
+    color: #36453B;
+    @apply text-justify pr-32 mb-10
+}
+
+.about .desc .btn {
+    background: #8447FF;
+    border: 1px solid #8447FF;
+    transition: 0.2s ease;
+    @apply mx-0
+}
+
+.about .desc .btn:hover {
+    color: #8447FF;
+    background: transparent;
+}
