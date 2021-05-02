@@ -1,0 +1,111 @@
+/* nav bar */
+
+.navbar {
+    height: 100px;
+    z-index: 10;
+    @apply w-full px-40 fixed top-0 left-0 flex justify-between items-center
+}
+
+.logo {
+    height: 70px;
+}
+
+.logo img {
+    @apply h-full w-auto
+}
+
+.nav-links {
+    @apply flex items-center
+}
+
+.nav-links .link {
+    color: #36453B;
+    font-size: 18px;
+    @apply mx-5 uppercase font-medium
+}
+
+.nav-links .sub-links {
+    background-color: white;
+    width: 140px;
+    top: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-22%);
+    box-shadow: 2px 1px 5px 0px #36453b77;
+    transition: all .2s ease;
+    border-top: 3px solid #36453B;
+    @apply absolute
+}
+
+.nav-links .sub-links.show {
+    opacity: 1;
+    height: initial;
+    top: 30px;
+    transform: translateX(-15%);
+}
+
+.nav-links .sub-links .link {
+    @apply mx-5 my-2
+}
+
+
+/* end nav bar */
+
+
+/* hero section */
+
+.hero {
+    background-image: url("../../../images/mark-fletcher-brown-nN5L5GXKFz8-unsplash1.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    height: 100vh;
+    @apply w-full flex items-center justify-center flex-col text-center relative
+}
+
+.hero::after {
+    content: '';
+    z-index: -1;
+    background: rgba(172, 237, 255, 0.2);
+    @apply absolute w-full h-full
+}
+
+.hero .text-container .salutation {
+    color: #8447FF;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.hero .text-container .name {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.hero .text-container .role {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.hero .text-container .role span {
+    color: #8447FF;
+    text-decoration: underline;
+}
+
+.hero .btns-container {
+    @apply flex mt-10
+}
+
+.hero .btn {
+    background-color: #8447FF;
+    border: 1px solid #8447FF;
+    color: white;
+    transition: all .2s ease;
+}
+
+.hero .btn:hover {
+    background-color: transparent;
+    color: #8447FF;
+}
+
+
+/* end hero section */
