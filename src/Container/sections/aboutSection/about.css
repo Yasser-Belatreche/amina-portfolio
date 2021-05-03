@@ -1,5 +1,5 @@
 .about {
-    @apply mx-5
+    @apply mx-5 relative
 }
 
 .about .section-container {
@@ -17,7 +17,7 @@
     z-index: -1;
     top: -25px;
     left: -25px;
-    background-color: #8447FF;
+    background: linear-gradient(208.88deg, #89BBFE 0%, #8447FF 100%);
     @apply absolute h-full w-full
 }
 
@@ -34,7 +34,6 @@
 
 .about .desc p {
     font-size: 20px;
-    /* line-height: 45px; */
     color: #36453B;
     @apply text-center mt-6
 }
@@ -47,12 +46,47 @@
     @apply mx-0
 }
 
+.dots {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    z-index: -10;
+    top: -60px;
+    right: -85px;
+    @apply grid absolute
+}
+
+.dots .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ACEDFF78;
+    margin: 6px;
+}
+
+.shapes {
+    z-index: -10;
+}
+
+.shapes .circle {
+    width: 340px;
+    height: 340px;
+    border: 28px solid rgba(137, 187, 254, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    left: -200px;
+    @apply absolute
+}
+
 
 /* responsiveness */
 
 @media (min-width: 640px) {
     .about {
         @apply mx-16
+    }
+    .shapes .circle {
+        width: 400px;
+        height: 400px;
     }
 }
 
@@ -84,6 +118,12 @@
     .about .desc p {
         @apply text-left mt-0
     }
+    .shapes .circle {
+        width: 500px;
+        height: 500px;
+        left: -300px;
+        border: 35px solid rgba(137, 187, 254, 0.4);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -100,11 +140,23 @@
     .about .img {
         height: 420px;
     }
+    .shapes .rectangle {
+        width: 700px;
+        height: 360px;
+        border-radius: 80px;
+        top: -100px;
+        right: -490px;
+        background: rgba(172, 237, 255, 0.49);
+        @apply absolute
+    }
 }
 
 @media (min-width: 1280px) {
     .about {
         @apply m-40
+    }
+    .about .section-container {
+        grid-template-columns: 7fr 8fr;
     }
     .about .img-container {
         @apply mr-16
