@@ -5,7 +5,7 @@ import image from '../../../images/marcos-paulo-prado-gKqIvUBsxEc-unsplash.jpg'
 const About = () => {
   return (
     <div className="about" id="about">
-      <div className="container">
+      <div className="section-container">
         <div className="section-title">
           <h1 className="title">About me</h1>
         </div>

@@ -6,7 +6,7 @@ const Container = () => {
   return (
     <>
       <Hero/>
-      <About/>
+      {/* <About/> */}
     </>
   )
 }

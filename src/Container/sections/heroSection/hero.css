@@ -1,51 +1,69 @@
 /* nav bar */
 
+.nav-container {
+    height: 70px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    @apply fixed w-full z-10
+}
+
+.nav-container.showLinks {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    height: 330px;
+}
+
 .navbar {
-    height: 100px;
-    z-index: 10;
-    @apply w-full px-40 fixed top-0 left-0 flex justify-between items-center
+    height: 70px;
+    @apply flex w-full px-6 top-0 left-0 justify-between items-center
+}
+
+.navbar .nav-links {
+    display: none !important;
 }
 
 .logo {
-    height: 70px;
+    height: 50px;
 }
 
 .logo img {
     @apply h-full w-auto
 }
 
-.nav-links {
-    @apply flex items-center
+.nav-btn {
+    height: 20px;
+    @apply flex flex-col justify-between cursor-pointer
+}
+
+.nav-btn .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #36453B;
+}
+
+.nav-container .nav-links {
+    @apply flex flex-col items-start
 }
 
 .nav-links .link {
     color: #36453B;
     font-size: 18px;
-    @apply mx-5 uppercase font-medium
+    @apply my-2 ml-6 uppercase font-medium
 }
 
-.nav-links .sub-links {
-    background-color: white;
-    width: 140px;
-    top: 20px;
-    opacity: 0;
+.nav-container .nav-links .sub-links {
+    height: 0;
     overflow: hidden;
-    transform: translateX(-22%);
-    box-shadow: 2px 1px 5px 0px #36453b77;
-    transition: all .2s ease;
-    border-top: 3px solid #36453B;
-    @apply absolute
+    transition: all 0.5s ease;
 }
 
-.nav-links .sub-links.show {
-    opacity: 1;
-    height: initial;
-    top: 30px;
-    transform: translateX(-15%);
+.rotate {
+    transform: rotate(180deg);
 }
 
-.nav-links .sub-links .link {
-    @apply mx-5 my-2
+.nav-container .nav-links .sub-links.showSubLinks {
+    height: 110px;
 }
 
 
@@ -72,17 +90,17 @@
 
 .hero .text-container .salutation {
     color: #8447FF;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
 }
 
 .hero .text-container .name {
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 700;
 }
 
 .hero .text-container .role {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 800;
 }
 
@@ -92,20 +110,87 @@
 }
 
 .hero .btns-container {
-    @apply flex mt-10
-}
-
-.hero .btn {
-    background-color: #8447FF;
-    border: 1px solid #8447FF;
-    color: white;
-    transition: all .2s ease;
-}
-
-.hero .btn:hover {
-    background-color: transparent;
-    color: #8447FF;
+    @apply flex mt-10 flex-col
 }
 
 
 /* end hero section */
+
+
+/* responsiveness */
+
+@media (min-width: 400px) {
+    .hero .text-container .name {
+        font-size: 45px;
+    }
+    .hero .text-container .role {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 640px) {
+    .hero .text-container .salutation {
+        font-size: 25px;
+    }
+    .hero .text-container .name {
+        font-size: 50px;
+    }
+    .hero .text-container .role {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero .text-container .name {
+        font-size: 55px;
+    }
+    .hero .btns-container {
+        @apply flex-row
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-container {
+        overflow: initial;
+    }
+    .nav-container .nav-links {
+        display: none;
+    }
+    .nav-btn {
+        @apply hidden
+    }
+    .navbar {
+        @apply px-16
+    }
+    .navbar .nav-links {
+        display: flex !important;
+        @apply flex-row items-center
+    }
+    .hero .text-container .salutation {
+        font-size: 28px;
+    }
+    .hero .text-container .name {
+        font-size: 65px;
+    }
+    .hero .text-container .role {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar {
+        @apply px-32
+    }
+    .navbar .nav-links .link {
+        @apply mx-4
+    }
+    .hero .text-container .salutation {
+        font-size: 30px;
+    }
+    .hero .text-container .name {
+        font-size: 75px;
+    }
+    .hero .text-container .role {
+        font-size: 45px;
+    }
+}
