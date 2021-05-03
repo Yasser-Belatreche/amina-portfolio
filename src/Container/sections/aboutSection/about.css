@@ -1,20 +1,15 @@
 .about {
-    @apply mx-32 my-20
+    @apply mx-5
 }
 
 .about .section-container {
-    grid-template-columns: 7fr 8fr;
-    grid-template-rows: 1fr 2fr;
-    max-width: 100%;
-    @apply grid gap-10 items-end w-full
+    @apply flex flex-col items-center
 }
 
 .about .img {
-    height: 85%;
-    width: 60%;
-    grid-row: 1 / span 2;
+    height: 380px;
     z-index: 1;
-    @apply justify-self-end relative ml-8
+    @apply relative mt-8
 }
 
 .about .img:after {
@@ -27,58 +22,112 @@
 }
 
 .about .img img {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.about .title {
-    align-items: flex-end !important;
-    @apply flex h-full w-full
+.about .desc {
+    @apply flex w-full items-center flex-col
 }
 
 .about .desc p {
-    font-size: 28px;
-    line-height: 45px;
+    font-size: 20px;
+    /* line-height: 45px; */
     color: #36453B;
-    @apply text-justify pr-32 mb-10
+    @apply text-center mt-6
 }
 
-.about .desc .btn {
-    background: #8447FF;
-    border: 1px solid #8447FF;
-    transition: 0.2s ease;
+.about .btn {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
     @apply mx-0
 }
 
-.about .desc .btn:hover {
-    color: #8447FF;
-    background: transparent;
-}
 
-@media (max-width: 1400px) {
+/* responsiveness */
+
+@media (min-width: 640px) {
     .about {
         @apply mx-16
     }
+}
+
+@media (min-width: 768px) {
+    .about {
+        @apply my-24
+    }
+    .about .section-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        @apply grid gap-2 items-end w-full
+    }
+    .about .section-title {
+        @apply items-start
+    }
+    .about .section-title .underline {
+        @apply ml-6
+    }
+    .about .img-container {
+        grid-row: 1 / span 2;
+        @apply flex justify-end mr-8
+    }
+    .about .img {
+        width: fit-content;
+    }
+    .about .desc {
+        @apply items-start h-full
+    }
     .about .desc p {
-        @apply pr-10
+        @apply text-left mt-0
     }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) {
     .about {
-        @apply mx-14
+        @apply my-32
     }
-    .about .title {
-        font-size: 40px;
+    .about .desc p {
+        font-size: 25px;
+        @apply my-3
     }
-    .about .about .desc p {
-        line-height: auto;
-        font-size: 20px;
-        @apply pr-8
+    .about .img-container {
+        @apply mr-12
     }
     .about .img {
-        @apply ml-8
+        height: 420px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about {
+        @apply m-40
+    }
+    .about .img-container {
+        @apply mr-16
+    }
+    .about .img {
+        height: 470px;
+        width: 400px;
+    }
+    .about .img::after {
+        top: -35px;
+        left: -35px;
+    }
+    .about .img img {
+        width: 100%;
+    }
+    .about .desc p {
+        font-size: 28px;
+        @apply pr-16
+    }
+    .about .btn {
+        font-size: 22px;
+        width: 250px;
+        height: 45px;
+        border-radius: 15px;
     }
 }

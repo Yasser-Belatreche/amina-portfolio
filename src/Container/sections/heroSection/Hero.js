@@ -110,10 +110,6 @@ const Hero = () => {
         {/* phone nav bar */}
       </div>
       
-        
-
-        
-
       <div className="hero" id="hero">
         <div className="text-container">
           <p className="salutation">Hey! I AM</p>
