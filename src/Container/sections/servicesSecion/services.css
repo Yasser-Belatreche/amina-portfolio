@@ -1,0 +1,94 @@
+.services {
+    @apply px-3 relative
+}
+
+.services-container {
+    @apply flex items-center mt-4 flex-wrap justify-around w-full
+}
+
+.service {
+    min-width: 300px;
+    max-width: 380px;
+    border: 1px solid #8447FF;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px 0px #ACEDFF;
+    z-index: 1;
+    background-color: white;
+    @apply p-5 flex flex-col items-center my-4 relative overflow-hidden cursor-pointer
+}
+
+.service::after {
+    content: "";
+    background-color: #8447FF;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+    @apply absolute w-full h-0
+}
+
+.service:hover::after {
+    @apply h-full
+}
+
+.service .icon {
+    height: 30px;
+    width: 30px;
+    color: #8447FF;
+    transition: .4s;
+}
+
+.service .name {
+    font-size: 25px;
+    transition: .4s;
+    @apply font-bold my-4
+}
+
+.service .service-desc {
+    font-size: 20px;
+    color: #36453B;
+    transition: .4s;
+    @apply mt-5 text-center
+}
+
+.service:hover .icon,
+.service:hover .name,
+.service:hover .service-desc {
+    color: white;
+}
+
+.services .circle {
+    right: -200px;
+    left: unset;
+    top: 0;
+}
+
+.services .shapes .rectangle {
+    height: 320px;
+    top: 50%;
+    left: -400px;
+    right: unset;
+    width: 700px;
+    border-radius: 80px;
+    z-index: -1;
+    background: rgba(172, 237, 255, 0.49);
+    @apply absolute
+}
+
+@media (min-width: 640px) {
+    .services .shapes .rectangle {
+        left: -300px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .shapes .circle {
+        right: -300px;
+    }
+}
+
+@media (min-width: 1368px) {
+    .services {
+        @apply px-48
+    }
+}

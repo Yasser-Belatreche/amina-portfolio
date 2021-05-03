@@ -100,7 +100,7 @@
         @apply grid gap-2 items-end w-full
     }
     .about .section-title {
-        @apply items-start
+        @apply items-start m-0
     }
     .about .section-title .underline {
         @apply ml-6
