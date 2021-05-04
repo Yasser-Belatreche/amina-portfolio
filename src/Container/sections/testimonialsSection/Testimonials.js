@@ -2,7 +2,8 @@ import React from 'react';
 import './testimonials.css';
 import Testomonial from './Testimonial';
 import {data} from './data';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Testimonials = () => {
   return (
@@ -13,11 +14,19 @@ const Testimonials = () => {
       </div>
 
       <div className="testimonials-container">
-        {
-          data.map((person, index) => {
-            return <Testomonial key={index} {...person} />
-          })
-        }
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          swipeable={true}
+          showThumbs={false}
+        >
+          {
+            data.map((person, index) => {
+              return <Testomonial key={index} {...person} />
+            })
+          }
+        </Carousel>
       </div>
     </div>
   )
