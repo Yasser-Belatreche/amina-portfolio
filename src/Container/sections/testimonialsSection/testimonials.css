@@ -6,7 +6,7 @@
     background: #ACEDFF;
     border-radius: 15px;
     max-width: 990px;
-    @apply mx-auto mt-8
+    @apply mx-auto my-8
 }
 
 .testimonial {
@@ -18,6 +18,7 @@
     width: 80px;
     height: 80px;
     overflow: hidden;
+    @apply mt-5
 }
 
 .testimonial .img img {
@@ -35,7 +36,21 @@
 .testimonial .text {
     font-size: 16px;
     color: #36453B;
-    @apply text-center
+    @apply text-center mb-7
+}
+
+.carousel .control-dots {
+    bottom: 0px !important;
+}
+
+.carousel .control-dots .dot {
+    opacity: 1 !important;
+    background: rgba(132, 71, 255, 0.2) !important;
+    box-shadow: none !important;
+}
+
+.carousel .control-dots .dot.selected {
+    background: #8447FF !important;
 }
 
 @media (min-width: 640px) {
@@ -49,6 +64,9 @@
     .testimonial .img img {
         border: 7px solid white !important;
     }
+    .testimonials-container {
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 850px) {
@@ -58,6 +76,9 @@
     .testimonial .text {
         font-size: 18px;
         margin-top: 20px;
+    }
+    .testimonials-container {
+        border-radius: 30px;
     }
 }
 
@@ -71,5 +92,8 @@
     }
     .testimonials-container {
         @apply mt-20
+    }
+    .testimonials-container {
+        border-radius: 40px;
     }
 }

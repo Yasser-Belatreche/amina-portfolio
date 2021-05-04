@@ -9,13 +9,6 @@ const Hero = () => {
   const [isLinksOpen, setIsLinksOpen] = useState(false);
   const [isSubLinksOpen, setIsSubLinksOpen] = useState(false);
   
-  const handleMouseOver = (e) => {
-    if (e.target.className.includes("about-link")) {
-      setIsSubLinksOpen(true);
-    }else {
-      setIsSubLinksOpen(false);
-    }
-  }
 
   useEffect(() => {
     const container = document.querySelector('.role span');
@@ -77,7 +70,7 @@ const Hero = () => {
             <a href="#hero" onClick={() => setIsLinksOpen(false)}>home</a>
           </div>
           <div className="link relative">
-            <a className="about-link flex items-center cursor-pointer" onClick={() => setIsSubLinksOpen(!isSubLinksOpen)}>
+            <a href="#" className="about-link flex items-center cursor-pointer" onClick={() => setIsSubLinksOpen(!isSubLinksOpen)}>
               about
               <IoIosArrowDown className="ml-1" style={{zIndex:'-5'}} className={`${isSubLinksOpen ? "rotate" : ""}`} style={{transition:".5s"}}/>
             </a>
