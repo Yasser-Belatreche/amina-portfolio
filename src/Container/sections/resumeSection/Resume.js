@@ -5,6 +5,7 @@ import Dots from '../aboutSection/Dots';
 import {education, experiences, skills} from './data';
 import Skill from './Skill';
 import Item from './Item';
+import star from '../../../images/Star-1.png';
 
 const Resume = () => {
   return (
@@ -13,7 +14,7 @@ const Resume = () => {
         <h1 className="title">Resume</h1>
         <div className="underline"></div>
       </div>
-      
+
       <div className="resume-container">
         <div className="resume-top">
           <div className="img-container">
@@ -24,7 +25,7 @@ const Resume = () => {
           </div>
 
           <div>
-            <div className="education">
+            <div className="education relative">
               <div className="sub-title">
                 <h1>Education</h1>
                 <div className="underline"></div>
@@ -36,9 +37,13 @@ const Resume = () => {
                   })
                 }
               </div>
+
+              <div className="shapes absolute">
+                <img src={star} alt=""/>
+              </div>
             </div>
 
-            <div className="experiences">
+            <div className="experiences relative">
               <div className="sub-title">
                 <h1>Experiences</h1>
                 <div className="underline"></div>
@@ -50,11 +55,15 @@ const Resume = () => {
                   })
                 }        
               </div>
+
+              <div className="shapes absolute">
+                <img src={star} alt=""/>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="resume-bottom">
+        <div className="resume-bottom relative">
           <div className="skills">
             <div className="sub-title pl-5">
               <h1>Skills</h1>
@@ -67,6 +76,10 @@ const Resume = () => {
                 })
               }
             </div>
+          </div>
+
+          <div className="shapes">
+            <div className="circle"></div>
           </div>
         </div>
       </div>

@@ -121,6 +121,37 @@
     background-color: #8447FF;
 }
 
+.education .shapes {
+    top: -100px;
+    right: -140px;
+    left: unset;
+}
+
+.experiences .shapes {
+    top: 0;
+    left: -140px;
+    right: unset;
+}
+
+.resume-bottom .shapes {
+    position: unset;
+}
+
+.resume-bottom .circle {
+    top: 20%;
+    right: -200px;
+    left: unset;
+    z-index: -10;
+}
+
+.resume-bottom .rectangle {
+    height: 80px;
+    width: 350px;
+    top: 0;
+    left: -150px;
+    right: unset;
+}
+
 
 /* responsiveness */
 
@@ -185,6 +216,15 @@
     .resume-container .sub-title {
         @apply mt-8
     }
+    .resume-bottom .circle {
+        right: -430px;
+    }
+    .education .shapes {
+        right: -300px;
+    }
+    .experiences .shapes {
+        left: -600px;
+    }
 }
 
 @media (min-width: 1190px) {
@@ -218,6 +258,17 @@
     .resume-container .resume-bottom .skills-container .skill .skill-rectangle {
         height: 26px;
     }
+    .education .shapes {
+        top: 50px;
+        right: -300px;
+    }
+    .experiences .shapes {
+        top: 200px;
+        left: -700px;
+    }
+    .resume-bottom .circle {
+        border: 45px solid rgba(137, 187, 254, 0.4);
+    }
 }
 
 @media (min-width: 1300px) {
@@ -227,6 +278,14 @@
     .resume-container .resume-bottom .skills-container .skill {
         width: 460px;
         @apply my-8
+    }
+    .education .shapes {
+        top: 50px;
+        right: -500px;
+    }
+    .experiences .shapes {
+        top: 200px;
+        left: -900px;
     }
 }
 
