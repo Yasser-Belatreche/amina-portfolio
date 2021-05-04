@@ -4,7 +4,7 @@
 
 .project {
     max-width: 450px;
-    @apply flex flex-col mx-auto pl-5 mt-10
+    @apply flex flex-col mx-auto pl-5 mt-10 relative
 }
 
 .project .project-img {
@@ -68,6 +68,18 @@
     height: 40px;
     border-radius: 12px;
     @apply mt-5
+}
+
+.project .shapes {
+    top: 30%;
+    right: -100px;
+    @apply absolute
+}
+
+.project:nth-child(even) .shapes {
+    top: 10%;
+    right: unset;
+    left: -100px;
 }
 
 
