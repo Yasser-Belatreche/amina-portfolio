@@ -4,6 +4,7 @@ import About from './sections/aboutSection/About';
 import Services from './sections/servicesSecion/Services';
 import Projects from './sections/projectsSection/Projects';
 import Resume from './sections/resumeSection/Resume';
+import Testimonials from './sections/testimonialsSection/Testimonials';
 
 const Container = () => {
   return (
@@ -13,6 +14,7 @@ const Container = () => {
       <Services />
       <Projects />
       <Resume />
+      <Testimonials />
     </>
   )
 }
