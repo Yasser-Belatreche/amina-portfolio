@@ -47,10 +47,10 @@ const Hero = () => {
               <a href="#hero">home</a>
             </div>
             <div className="link">
-              <a href="#">about</a>
+              <a href="#about">about</a>
             </div>
             <div className="link">
-              <a href="#hero">Services</a>
+              <a href="#services">Services</a>
             </div>
             <div className="link">
               <a href="#projects">projects</a>
@@ -62,7 +62,7 @@ const Hero = () => {
               <a href="#testimonials">testimonials</a>
             </div>
             <div className="link">
-              <a href="#hero">fAQ</a>
+              <a href="#faq">fAQ</a>
             </div>
             <div className="link">
               <a href="#contact">contact</a>
@@ -74,37 +74,37 @@ const Hero = () => {
         {/* phone nav */}
         <div className="nav-links">
           <div className="link">
-            <a href="#hero">home</a>
+            <a href="#hero" onClick={() => setIsLinksOpen(false)}>home</a>
           </div>
           <div className="link relative">
-            <a href="#" className="about-link flex items-center" onClick={() => setIsSubLinksOpen(!isSubLinksOpen)}>
+            <a className="about-link flex items-center cursor-pointer" onClick={() => setIsSubLinksOpen(!isSubLinksOpen)}>
               about
               <IoIosArrowDown className="ml-1" style={{zIndex:'-5'}} className={`${isSubLinksOpen ? "rotate" : ""}`} style={{transition:".5s"}}/>
             </a>
 
             <div className= {`sub-links ${isSubLinksOpen ? "showSubLinks" : ""}`}>
               <div className="link" style={{}}>
-                <a href="#hero">- Who I am</a>
+                <a href="#about" onClick={() => setIsLinksOpen(false)}>- Who I am</a>
               </div>
               <div className="link">
-                <a href="#hero">- Services</a>
+                <a href="#services" onClick={() => setIsLinksOpen(false)}>- Services</a>
               </div>
               <div className="link" style={{}}>
-                <a href="#hero">- fAQ</a>
+                <a href="#faq" onClick={() => setIsLinksOpen(false)}>- fAQ</a>
               </div>
             </div>
           </div>
           <div className="link">
-            <a href="#projects">projects</a>
+            <a href="#projects" onClick={() => setIsLinksOpen(false)}>projects</a>
           </div>
           <div className="link">
-            <a href="#resume">resume</a>
+            <a href="#resume" onClick={() => setIsLinksOpen(false)}>resume</a>
           </div>
           <div className="link">
-            <a href="#testimonials">testimonials</a>
+            <a href="#testimonials" onClick={() => setIsLinksOpen(false)}>testimonials</a>
           </div>
           <div className="link">
-            <a href="#contact">contact</a>
+            <a href="#contact" onClick={() => setIsLinksOpen(false)}>contact</a>
           </div>
         </div>
         {/* phone nav bar */}

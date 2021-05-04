@@ -31,7 +31,7 @@
 
 .project .project-title h1 {
     font-size: 25px;
-    @apply font-bold
+    @apply font-extrabold
 }
 
 .project .project-title .underline {
