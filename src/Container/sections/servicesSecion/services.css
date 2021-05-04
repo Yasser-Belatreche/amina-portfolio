@@ -1,5 +1,5 @@
 .services {
-    @apply px-3 relative
+    @apply px-3 relative mb-10
 }
 
 .services-container {
@@ -23,7 +23,7 @@
     z-index: -1;
     left: 0;
     bottom: 0;
-    transition: 0.4s;
+    transition: 0.3s;
     @apply absolute w-full h-0
 }
 
@@ -35,20 +35,20 @@
     height: 30px;
     width: 30px;
     color: #8447FF;
-    transition: .4s;
+    transition: .3s;
 }
 
 .service .name {
     font-size: 25px;
-    transition: .4s;
+    transition: .3s;
     @apply font-bold my-4
 }
 
 .service .service-desc {
-    font-size: 20px;
+    font-size: 18px;
     color: #36453B;
-    transition: .4s;
-    @apply mt-5 text-center
+    transition: .3s;
+    @apply mt-2 text-center
 }
 
 .service:hover .icon,
@@ -83,12 +83,12 @@
 
 @media (min-width: 768px) {
     .shapes .circle {
-        right: -300px;
+        right: -200px;
     }
 }
 
 @media (min-width: 1368px) {
     .services {
-        @apply px-48
+        @apply px-40
     }
 }

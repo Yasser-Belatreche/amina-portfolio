@@ -1,0 +1,169 @@
+.projects {
+    @apply px-3
+}
+
+.project {
+    max-width: 450px;
+    @apply flex flex-col mx-auto pl-5 mt-10
+}
+
+.project .project-img {
+    @apply w-full flex justify-center
+}
+
+.project .project-img .project-img-container {
+    max-width: 340px;
+    @apply relative
+}
+
+.project .project-img .project-img-container::after {
+    content: "";
+    background: linear-gradient(208.88deg, #89BBFE 0%, #8447FF 100%);
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+    @apply absolute w-full h-full
+}
+
+.project .project-title {
+    @apply my-4
+}
+
+.project .project-title h1 {
+    font-size: 25px;
+    @apply font-bold
+}
+
+.project .project-title .underline {
+    height: 4px;
+    width: 70px;
+    background-color: #8447FF;
+    border-radius: 5px;
+}
+
+.project .project-desc {
+    font-size: 18px;
+    color: #36453B;
+    @apply pr-2
+}
+
+.project .project-desc a {
+    width: fit-content;
+    font-size: 19px;
+    color: #8447FF;
+    @apply flex items-center my-3
+}
+
+.project .project-desc a svg {
+    transition: all 0.3s ease;
+}
+
+.project .project-desc a:hover svg {
+    @apply flex items-center ml-2
+}
+
+.projects .btn {
+    font-size: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 12px;
+    @apply mt-5
+}
+
+
+/* responsiveness */
+
+@media (min-width: 640px) {
+    .project {
+        max-width: none;
+        @apply flex-row w-full items-center
+    }
+    .project:nth-child(even) {
+        @apply flex-row-reverse
+    }
+    .project .project-img {
+        flex: 1;
+    }
+    .project .project-img .project-img-container {
+        max-width: none;
+        width: 90%;
+        @apply mx-4
+    }
+    .project:nth-child(even) .project-img .project-img-container::after {
+        top: -20px;
+        right: -20px;
+        left: unset;
+    }
+    .project .text {
+        flex: 1;
+    }
+    .project .project-title {
+        @apply mt-0
+    }
+    .projects .btn {
+        @apply mt-10
+    }
+}
+
+@media (min-width: 850px) {
+    .project .project-title h1 {
+        font-size: 30px;
+    }
+    .project .project-desc {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project {
+        @apply px-20
+    }
+    .project .project-img .project-img-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1190px) {
+    .project .project-title h1 {
+        font-size: 35px;
+    }
+    .project .project-desc {
+        font-size: 22px;
+    }
+    .project .project-desc a {
+        font-size: 20px;
+    }
+    .projects .btn {
+        width: 280px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .project {
+        @apply px-28 my-12
+    }
+    .project .text {
+        @apply flex flex-col items-start
+    }
+    .project .project-desc {
+        @apply mt-6
+    }
+    .project .project-desc a {
+        @apply mt-6
+    }
+    .project:nth-child(even) .text {
+        padding-left: 5%;
+    }
+    .projects .btn {
+        width: 300px;
+        @apply mt-0
+    }
+}
+
+@media (min-width: 1400px) {
+    .project {
+        @apply px-40
+    }
+}
