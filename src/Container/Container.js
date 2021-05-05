@@ -7,6 +7,7 @@ import Resume from './sections/resumeSection/Resume';
 import Testimonials from './sections/testimonialsSection/Testimonials';
 import FAQ from './sections/faqSection/FAQ';
 import Contact from './sections/contactSection/Contact';
+import Footer from './sections/footerSection/Footer';
 
 const Container = () => {
   return (
@@ -19,6 +20,7 @@ const Container = () => {
       <Testimonials />
       <FAQ />
       <Contact />
+      <Footer />
     </>
   )
 }
