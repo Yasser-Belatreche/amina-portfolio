@@ -1,0 +1,96 @@
+.nav-container {
+    height: 80px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    @apply fixed w-full z-10
+}
+
+.nav-container.showLinks {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white !important;
+    height: 340px;
+}
+
+.navbar {
+    height: 80px;
+    @apply flex w-full px-6 top-0 left-0 justify-between items-center
+}
+
+.navbar .nav-links {
+    display: none !important;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    @apply h-full w-auto
+}
+
+.nav-btn {
+    height: 20px;
+    @apply flex flex-col justify-between cursor-pointer
+}
+
+.nav-btn .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #36453B;
+}
+
+.nav-container .nav-links {
+    @apply flex flex-col items-start
+}
+
+.nav-links .link {
+    color: #36453B;
+    font-size: 18px;
+    @apply my-2 ml-6 uppercase font-medium cursor-pointer
+}
+
+.nav-container .nav-links .sub-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.nav-container .nav-links .sub-links.showSubLinks {
+    height: 110px;
+}
+
+
+/* responsiveness */
+
+@media (min-width: 1024px) {
+    .nav-container {
+        overflow: initial;
+    }
+    .nav-container .nav-links {
+        display: none;
+    }
+    .nav-btn {
+        @apply hidden
+    }
+    .navbar {
+        @apply px-16
+    }
+    .navbar .nav-links {
+        display: flex !important;
+        @apply flex-row items-center
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar {
+        @apply px-32
+    }
+    .navbar .nav-links .link {
+        @apply mx-4
+    }
+}

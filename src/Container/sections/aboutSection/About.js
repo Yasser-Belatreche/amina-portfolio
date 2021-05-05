@@ -1,7 +1,8 @@
-import React from 'react'
-import './about.css'
-import image from '../../../images/marcos-paulo-prado-gKqIvUBsxEc-unsplash.jpg'
-import Dots from './Dots'
+import React from 'react';
+import './about.css';
+import image from '../../../images/marcos-paulo-prado-gKqIvUBsxEc-unsplash.jpg';
+import Dots from './Dots';
+import {scrollTo} from '../navbar/Navbar';
 
 const About = () => {
   return (
@@ -22,7 +23,7 @@ const About = () => {
 
         <div className="desc">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni consequatur vitae sequi nam atque. Odio voluptatem ab eveniet? Harum praesentium minima esse fugiat numquam sint itaque rerum. Iste, itaque.</p>
-          <a className="btn" href="#resume">Learn More</a>
+          <a className="btn" onClick={() => scrollTo("resume")}>Learn More</a>
         </div>
 
         <div className="shapes">

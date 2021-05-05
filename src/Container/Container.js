@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './sections/navbar/Navbar';
 import Hero from './sections/heroSection/Hero';
 import About from './sections/aboutSection/About';
 import Services from './sections/servicesSecion/Services';
@@ -12,6 +13,7 @@ import Footer from './sections/footerSection/Footer';
 const Container = () => {
   return (
     <>
+      <NavBar />
       <Hero />
       <About />
       <Services />
