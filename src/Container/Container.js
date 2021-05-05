@@ -5,6 +5,7 @@ import Services from './sections/servicesSecion/Services';
 import Projects from './sections/projectsSection/Projects';
 import Resume from './sections/resumeSection/Resume';
 import Testimonials from './sections/testimonialsSection/Testimonials';
+import FAQ from './sections/faqSection/FAQ';
 
 const Container = () => {
   return (
@@ -15,6 +16,7 @@ const Container = () => {
       <Projects />
       <Resume />
       <Testimonials />
+      <FAQ />
     </>
   )
 }

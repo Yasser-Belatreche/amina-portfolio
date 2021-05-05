@@ -1,0 +1,113 @@
+.faq {
+    @apply px-3
+}
+
+.questions-container {
+    background: rgba(132, 71, 255, 0.2);
+    border-radius: 15px;
+    max-width: 850px;
+    @apply mx-auto p-3
+}
+
+.question-container {
+    background-color: white;
+    border-radius: 10px;
+    color: #36453B;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    @apply px-3 mb-3
+}
+
+.question-container .question-header {
+    font-size: 18px;
+    border-bottom: 2px solid #36453B;
+    @apply flex justify-between mx-2 font-bold items-center py-3
+}
+
+.question-container .question-header .icon {
+    width: 30px;
+    @apply cursor-pointer
+}
+
+.question-container .question-header .icon svg {
+    width: 100%;
+    height: 80%;
+    transition: all 0.3s ease;
+}
+
+.question-container.showAnswers .question-header .icon svg {
+    transform: rotate(180deg);
+}
+
+.question-container .answers {
+    font-size: 16px;
+    @apply pl-5 py-3
+}
+
+@media (min-width: 640px) {
+    .question-container .question-header {
+        font-size: 22px;
+    }
+    .question-container .answers {
+        font-size: 18px;
+    }
+    .questions-container {
+        @apply p-4
+    }
+    .question-container {
+        @apply px-4
+    }
+    .question-container .question-header {
+        @apply mx-3 py-4
+    }
+}
+
+@media (min-width: 768px) {
+    .question-container .question-header {
+        font-size: 25px;
+    }
+    .question-container .answers {
+        font-size: 20px;
+        @apply pl-6 py-4
+    }
+    .questions-container {
+        @apply p-5
+    }
+    .question-container {
+        @apply px-5
+    }
+    .question-container .question-header {
+        @apply mx-4 py-5
+    }
+    .question-container .question-header .icon {
+        width: 40px;
+    }
+}
+
+@media (min-width: 1190px) {
+    .questions-container {
+        border-radius: 20px;
+    }
+    .question-container {
+        border-radius: 15px;
+    }
+    .question-container .question-header {
+        font-size: 28px;
+    }
+    .question-container .answers {
+        font-size: 21px;
+        @apply pl-8 py-5
+    }
+    .questions-container {
+        @apply p-6
+    }
+    .question-container {
+        @apply px-6
+    }
+    .question-container .question-header {
+        @apply mx-5 py-7
+    }
+    .question-container .question-header .icon {
+        width: 50px;
+    }
+}
