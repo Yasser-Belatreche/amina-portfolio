@@ -4,6 +4,22 @@ import Testomonial from './Testimonial';
 import {data} from './data';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
+
+const LeftBtn = ({onClickHandler, label}) => {
+  return (
+    <div className="left-btn" aria-label="previous slide / item" onClick={onClickHandler}>
+      <IoIosArrowBack />
+    </div>
+  )
+}
+const RightBtn = ({onClickHandler, label}) => {
+  return (
+    <div className="right-btn" aria-label="next slide / item" onClick={onClickHandler}>
+      <IoIosArrowForward />
+    </div>
+  )
+}
 
 const Testimonials = () => {
   return (
@@ -20,6 +36,8 @@ const Testimonials = () => {
           showStatus={false}
           swipeable={true}
           showThumbs={false}
+          renderArrowPrev={(onClickHandler) => <LeftBtn onClickHandler={onClickHandler}/> }
+          renderArrowNext={(onClickHandler) => <RightBtn onClickHandler={onClickHandler} />}
         >
           {
             data.map((person, index) => {

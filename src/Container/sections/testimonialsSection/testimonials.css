@@ -39,6 +39,29 @@
     @apply text-center mb-7
 }
 
+.testimonials-container .left-btn,
+.testimonials-container .right-btn {
+    color: #8447FF;
+    background-color: transparent;
+    width: 60px;
+    height: 90px;
+    transform: translateY(-50%);
+    @apply absolute cursor-pointer top-2/4 hidden
+}
+
+.testimonials-container .left-btn svg,
+.testimonials-container .right-btn svg {
+    @apply w-full h-full
+}
+
+.testimonials-container .left-btn {
+    left: 40px;
+}
+
+.testimonials-container .right-btn {
+    right: 40px;
+}
+
 .carousel .control-dots {
     bottom: 0px !important;
 }
@@ -79,6 +102,15 @@
     }
     .testimonials-container {
         border-radius: 30px;
+    }
+    .carousel .slider-wrapper {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+        width: auto !important;
+    }
+    .testimonials-container .left-btn,
+    .testimonials-container .right-btn {
+        @apply block
     }
 }
 
