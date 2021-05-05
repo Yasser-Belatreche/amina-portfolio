@@ -1,0 +1,53 @@
+.contact {
+    @apply px-3 relative
+}
+
+.contact-container {
+    @apply flex items-center mt-4 flex-wrap justify-around w-full
+}
+
+.single-contact {
+    min-width: 300px;
+    width: 380px;
+    border: 1px solid #8447FF;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0px #ACEDFF;
+    z-index: 1;
+    background-color: white;
+    transition: all ease 0.3s;
+    @apply p-5 flex flex-col items-center my-4 relative overflow-hidden relative bottom-0
+}
+
+.single-contact:hover {
+    bottom: 8px;
+}
+
+.single-contact .icon {
+    height: 50px;
+    width: 50px;
+    color: #8447FF;
+    transition: .3s;
+}
+
+.single-contact .icon svg {
+    @apply w-full h-full
+}
+
+.single-contact .name {
+    font-size: 25px;
+    transition: .3s;
+    @apply font-normal my-4
+}
+
+.single-contact .content {
+    font-size: 20px;
+    color: #36453B;
+    transition: .3s;
+    @apply mt-2 text-center
+}
+
+@media (min-width: 1368px) {
+    .contact {
+        @apply px-40
+    }
+}
