@@ -2,7 +2,7 @@
     height: 80px;
     overflow: hidden;
     transition: all 0.3s ease;
-    @apply fixed w-full z-10
+    @apply fixed w-full z-10 top-0
 }
 
 .nav-container.showLinks {
@@ -10,6 +10,10 @@
     overflow-y: scroll;
     background-color: white !important;
     height: 340px;
+}
+
+.nav-container.showLinks.all-projects {
+    height: 160px;
 }
 
 .navbar {

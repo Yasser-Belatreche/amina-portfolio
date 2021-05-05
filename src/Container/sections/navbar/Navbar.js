@@ -8,24 +8,26 @@ export const scrollTo = (section) => {
   let target = document.getElementById(section);
   let topOffset = target.offsetTop;
   window.scrollTo(0,topOffset - 80);
-  console.log(topOffset, section, target);
 }
 
 const Navbar = () => {
   const [isLinksOpen, setIsLinksOpen] = useState(false);
   const [isSubLinksOpen, setIsSubLinksOpen] = useState(false);
   const navbar = useRef(null);
-
-  useEffect(() => {
-    document.addEventListener('scroll', (e) => {
+  
+  useEffect(() => {  
+    const handleScroll = () => {
       if (window.scrollY > 50) {
         navbar.current.style.background = "white";
         navbar.current.style.boxShadow = "4px 4px 10px 0px #36453b36";
-      }else {
+      } else {
         navbar.current.style.background = "transparent";
         navbar.current.style.boxShadow = "none";
       }
-    })
+    }
+    document.addEventListener('scroll', handleScroll);
+
+    return () => document.removeEventListener('scroll', handleScroll);
   }, [])
 
   return (

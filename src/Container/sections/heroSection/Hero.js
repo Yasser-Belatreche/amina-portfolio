@@ -1,6 +1,8 @@
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect} from 'react';
 import './hero.css';
 import { init } from 'ityped';
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+
 
 
 const Hero = () => {
@@ -23,11 +25,13 @@ const Hero = () => {
       </div>
 
       <div className="btns-container">
-        <div >
-          <a href="#" className="btn">Hire Me</a>
+        <div>
+          <a href="#" className="btn" target="_blanc">Hire Me</a>
         </div>
-        <div >
-          <a href="#" className="btn">My Work</a>
+        <div>
+          <Link to="/all-projects">
+            <a className="btn">My Work</a>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import './Projects.css';
 import Project from './Project';
 import {data} from './data';
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -14,13 +15,17 @@ const Projects = () => {
       <div className="projects-container">
         {
           data.map((project, index) => {
-            return <Project key={index} {...project}/>
+            if (index < 3) {
+              return <Project key={index} {...project}/>
+            }
           })
         }
       </div>
 
       <div className="w-full justify-center flex">
-        <a href="#l" className="btn">See All Projects</a>
+        <Link to="/all-projects">
+          <a className="btn">See All Projects</a>
+        </Link>
       </div>
     </div>
   )
