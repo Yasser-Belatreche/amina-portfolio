@@ -46,6 +46,15 @@
     @apply mt-2 text-center
 }
 
+@media (min-width: 1024px) {
+    .contact {
+        @apply my-40
+    }
+    .contact .section-title {
+        @apply mb-10
+    }
+}
+
 @media (min-width: 1480px) {
     .contact {
         @apply px-40

@@ -90,6 +90,12 @@
 }
 
 @media (min-width: 1190px) {
+    .faq {
+        @apply my-32
+    }
+    .faq .section-title {
+        @apply mb-10
+    }
     .questions-container {
         border-radius: 20px;
     }

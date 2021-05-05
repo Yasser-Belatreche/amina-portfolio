@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="underline"></div>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, mollitia!</p>
+        <p>For more information you can reach out for in my social media acounts</p>
         <div className="icons">
           <div className="icon">
             <a href=""><FaFacebook /></a>

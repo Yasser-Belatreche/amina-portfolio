@@ -228,6 +228,9 @@
 }
 
 @media (min-width: 1190px) {
+    .resume {
+        @apply my-32
+    }
     .resume-container .sub-title {
         @apply mt-16
     }

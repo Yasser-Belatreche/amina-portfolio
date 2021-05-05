@@ -33,12 +33,17 @@
 .social-links .icons .icon {
     width: 35px;
     height: 35px;
-    @apply mr-4 my-2
+    transition: all 0.2s ease;
+    @apply mr-4 my-2 relative bottom-0
 }
 
 .social-links .icons .icon svg {
     width: 100%;
     height: 100%;
+}
+
+.social-links .icons .icon:hover {
+    bottom: 5px;
 }
 
 .btns-container {
@@ -50,6 +55,11 @@
     background: #ACEDFF;
     border-radius: 15px;
     @apply my-6
+}
+
+.footer .btns-container .btn:hover {
+    border: none;
+    background: white;
 }
 
 @media (min-width: 624px) {

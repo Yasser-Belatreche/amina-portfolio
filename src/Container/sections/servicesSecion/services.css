@@ -87,6 +87,12 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .services {
+        @apply my-32
+    }
+}
+
 @media (min-width: 1480px) {
     .services {
         @apply px-40

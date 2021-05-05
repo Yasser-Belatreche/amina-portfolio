@@ -128,7 +128,7 @@
 
 @media (min-width: 1024px) {
     .project {
-        @apply px-20
+        @apply px-20 my-20
     }
     .project .project-img .project-img-container {
         width: 80%;
