@@ -54,7 +54,7 @@ const ProjectsPage = () => {
       {/* nav bar  */}
 
 
-      <div className="projects mt-20" id="projects">
+      <div className="projects mt-20 mb-40" id="projects">
         <div className="section-title">
           <h1 className="title">All Projects</h1>
           <div className="underline" style={{width:"200px"}}></div>
