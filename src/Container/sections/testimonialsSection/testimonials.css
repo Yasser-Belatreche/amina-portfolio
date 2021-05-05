@@ -1,5 +1,5 @@
 .testimonials {
-    @apply px-2
+    @apply px-2 relative
 }
 
 .testimonials-container {
@@ -74,6 +74,19 @@
 
 .carousel .control-dots .dot.selected {
     background: #8447FF !important;
+}
+
+.testimonials .shapes {
+    top: 0;
+    left: -100px;
+    @apply absolute
+}
+
+.testimonials .shapes .rectangle {
+    height: 100px;
+    top: unset;
+    top: 250%;
+    right: -1600px;
 }
 
 @media (min-width: 640px) {

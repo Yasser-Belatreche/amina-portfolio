@@ -5,6 +5,7 @@ import {data} from './data';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
+import shape from '../../../images/Polygon-1.png';
 
 const LeftBtn = ({onClickHandler, label}) => {
   return (
@@ -45,6 +46,11 @@ const Testimonials = () => {
             })
           }
         </Carousel>
+      </div>
+
+      <div className="shapes">
+        <img src={shape} alt=""/>
+        <div className="rectangle"></div>
       </div>
     </div>
   )
