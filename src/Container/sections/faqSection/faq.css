@@ -1,11 +1,12 @@
 .faq {
-    @apply px-3
+    @apply px-3 relative
 }
 
 .questions-container {
     background: rgba(132, 71, 255, 0.2);
     border-radius: 15px;
     max-width: 850px;
+    padding-bottom: 1px !important;
     @apply mx-auto p-3
 }
 
@@ -42,6 +43,10 @@
 .question-container .answers {
     font-size: 16px;
     @apply pl-5 py-3
+}
+
+.faq .shapes .circle {
+    z-index: -10;
 }
 
 @media (min-width: 640px) {
@@ -90,6 +95,7 @@
     }
     .question-container {
         border-radius: 15px;
+        @apply mb-5
     }
     .question-container .question-header {
         font-size: 28px;

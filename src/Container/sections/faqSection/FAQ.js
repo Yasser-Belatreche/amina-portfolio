@@ -20,6 +20,10 @@ const FAQ = () => {
           })
         }
       </div>
+
+      <div className="shapes">
+        <div className="circle"></div>
+      </div>
     </div>
   )
 }
