@@ -53,6 +53,7 @@
 .footer .btns-container .btn {
     color: #36453B;
     background: #ACEDFF;
+    border-color: #ACEDFF !important;
     border-radius: 15px;
     @apply my-6
 }
@@ -60,6 +61,7 @@
 .footer .btns-container .btn:hover {
     border: none;
     background: white;
+    border-color: white !important;
 }
 
 @media (min-width: 624px) {
