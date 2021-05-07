@@ -1,6 +1,10 @@
 .footer {
     background-color: #36453B;
-    @apply p-8 flex flex-col items-center justify-center
+    @apply p-8 pb-0
+}
+
+.footer-container {
+    @apply flex flex-col items-center justify-center
 }
 
 .social-links {
@@ -50,7 +54,7 @@
     @apply my-4
 }
 
-.footer .btns-container .btn {
+.footer-container .btns-container .btn {
     color: #36453B;
     background: #ACEDFF;
     border-color: #ACEDFF !important;
@@ -58,7 +62,7 @@
     @apply my-6
 }
 
-.footer .btns-container .btn:hover {
+.footer-container .btns-container .btn:hover {
     border: none;
     background: white;
     border-color: white !important;
@@ -71,7 +75,7 @@
 }
 
 @media (min-width: 768px) {
-    .footer {
+    .footer-container {
         @apply flex-row justify-between
     }
     .social-links {
@@ -95,10 +99,10 @@
     .footer {
         @apply px-10
     }
-    .footer .btns-container {
+    .footer-container .btns-container {
         @apply flex items-center justify-center
     }
-    .footer .btns-container .btn {
+    .footer-container .btns-container .btn {
         @apply mr-5 ml-0
     }
 }
@@ -110,10 +114,10 @@
     .social-links {
         @apply ml-8
     }
-    .footer .btns-container {
+    .footer-container .btns-container {
         @apply mr-10
     }
-    .footer .btns-container .btn {
+    .footer-container .btns-container .btn {
         width: 300px;
         height: 60px;
     }
