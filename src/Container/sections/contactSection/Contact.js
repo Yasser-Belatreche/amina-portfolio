@@ -18,13 +18,11 @@ const Contact = () => {
       </Fade>
 
       <div className="contact-container">
-        <Fade bottom>
-          {
-            data.map((contact, index) => {
-              return <Item key={index} {...contact} />
-            })
-          }
-        </Fade>
+        {
+          data.map((contact, index) => {
+            return <Item key={index} {...contact} />
+          })
+        }
       </div>
 
     </div>

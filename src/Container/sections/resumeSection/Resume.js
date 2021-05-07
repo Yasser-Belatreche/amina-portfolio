@@ -86,13 +86,11 @@ const Resume = () => {
             </Fade>
 
             <div className="skills-container">
-              <Fade bottom>
                 {
                   skills.map((skill, index) => {
                     return <Skill key={index} {...skill} />
                   })
                 }
-              </Fade>
             </div>
             
           </div>
