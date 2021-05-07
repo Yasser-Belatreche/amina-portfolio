@@ -6,37 +6,48 @@ import {education, experiences, skills} from './data';
 import Skill from './Skill';
 import Item from './Item';
 import star from '../../../images/Star-1.png';
+import Fade from 'react-reveal/Fade';
+
 
 const Resume = () => {
   return (
     <div className="resume" id="resume">
-      <div className="section-title">
-        <h1 className="title">Resume</h1>
-        <div className="underline"></div>
-      </div>
+      <Fade bottom>
+        <div className="section-title">
+          <h1 className="title">Resume</h1>
+          <div className="underline"></div>
+        </div>
+      </Fade>
 
       <div className="resume-container">
         <div className="resume-top">
+          
           <div className="img-container">
-            <div className="img">
-              <img src={image} alt=""/>
-             <Dots/>
-            </div>
+            <Fade left>
+              <div className="img">
+                <img src={image} alt=""/>
+                <Dots/>
+              </div>
+            </Fade>
+
           </div>
 
           <div>
+            
             <div className="education relative">
-              <div className="sub-title">
-                <h1>Education</h1>
-                <div className="underline"></div>
-              </div>
-              <div className="top-content">
-                {
-                  education.map((item, index) => {
-                    return <Item key={index} {...item} />
-                  })
-                }
-              </div>
+              <Fade right>
+                <div className="sub-title">
+                  <h1>Education</h1>
+                  <div className="underline"></div>
+                </div>
+                <div className="top-content">
+                  {
+                    education.map((item, index) => {
+                      return <Item key={index} {...item} />
+                    })
+                  }
+                </div>
+              </Fade>
 
               <div className="shapes absolute">
                 <img src={star} alt=""/>
@@ -44,17 +55,19 @@ const Resume = () => {
             </div>
 
             <div className="experiences relative">
-              <div className="sub-title">
-                <h1>Experiences</h1>
-                <div className="underline"></div>
-              </div>
-              <div className="top-content">
-                {
-                  experiences.map((experinece, index) => {
-                    return <Item key={index} {...experinece}/>
-                  })
-                }        
-              </div>
+              <Fade right>
+                <div className="sub-title">
+                  <h1>Experiences</h1>
+                  <div className="underline"></div>
+                </div>
+                <div className="top-content">
+                  {
+                    experiences.map((experinece, index) => {
+                      return <Item key={index} {...experinece}/>
+                    })
+                  }        
+                </div>
+              </Fade>
 
               <div className="shapes absolute">
                 <img src={star} alt=""/>
@@ -65,17 +78,23 @@ const Resume = () => {
 
         <div className="resume-bottom relative">
           <div className="skills">
-            <div className="sub-title pl-5">
-              <h1>Skills</h1>
-              <div className="underline"></div>
-            </div>
+            <Fade bottom>
+              <div className="sub-title pl-5">
+                <h1>Skills</h1>
+                <div className="underline"></div>
+              </div>
+            </Fade>
+
             <div className="skills-container">
-              {
-                skills.map((skill, index) => {
-                  return <Skill key={index} {...skill} />
-                })
-              }
+              <Fade bottom>
+                {
+                  skills.map((skill, index) => {
+                    return <Skill key={index} {...skill} />
+                  })
+                }
+              </Fade>
             </div>
+            
           </div>
 
           <div className="shapes">

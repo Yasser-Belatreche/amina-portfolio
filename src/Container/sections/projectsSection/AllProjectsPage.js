@@ -62,8 +62,8 @@ const ProjectsPage = () => {
 
         <div className="projects-container">
           {
-            data.map((project, index) => {
-              return <Project key={index} {...project}/>
+            data.map((project, index) => {  
+              return <Project key={index} {...project}/>              
             })
           }
         </div>
