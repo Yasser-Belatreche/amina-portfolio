@@ -26,11 +26,13 @@ const Projects = () => {
         }
       </div>
 
-      <div className="w-full justify-center flex">
-        <Link to="/all-projects">
-          <a className="btn">See All Projects</a>
-        </Link>
-      </div>
+      <Fade bottom>
+        <div className="w-full justify-center flex">
+          <Link to="/all-projects">
+            <a className="btn">See All Projects</a>
+          </Link>
+        </div>
+      </Fade>
     </div>
   )
 }

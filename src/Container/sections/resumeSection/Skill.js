@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
+
+
 
 const Skill = ({percentage, name}) => {
+
+
   return (
     <div className="skill">
       <div className="skill-head">
@@ -11,7 +15,7 @@ const Skill = ({percentage, name}) => {
           <p>{percentage}</p>
         </div>
       </div>
-      <div className="skill-rectangle">
+      <div className="skill-rectangle" >
         <div className="skill-amount" style={{width:`${percentage}`}}></div>
       </div>
     </div>

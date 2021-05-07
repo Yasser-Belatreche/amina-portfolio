@@ -15,11 +15,13 @@ const FAQ = () => {
         </div>
         
         <div className="questions-container">
-          {
-            data.map((question, index) => {
-              return <Question key={index} {...question} />
-            })
-          }
+          <Fade bottom>
+            {
+              data.map((question, index) => {
+                return <Question key={index} {...question} />
+              })
+            }
+          </Fade>
         </div>
       </Fade>
 
